@@ -10,13 +10,16 @@ public class MainMenu : MonoBehaviour
     public GameObject settingsPanel;
 
     // Start the game (load your first game scene)
-    public void StartGame()
-    {
-        SceneManager.LoadScene("GameScene"); // Replace with your game scene name
-    }
+    //public void StartGame()
+    //{
+    //    SceneManager.LoadScene("GameScene"); // Replace with your game scene name
+    //}
 
     public void ShowRoundController() { 
         roundController.SetActive(true);
+        howToPlayPanel.SetActive(false);
+        guidePanel.SetActive(false);
+        settingsPanel.SetActive(false);
         gameObject.SetActive(false);
 
         roundController.GetComponent<RoundController>().ResetRoundController();
@@ -26,6 +29,9 @@ public class MainMenu : MonoBehaviour
     public void ShowHowToPlay()
     {
         howToPlayPanel.SetActive(true);
+        roundController.SetActive(false);
+        guidePanel.SetActive(false);
+        settingsPanel.SetActive(false);
         gameObject.SetActive(false); // hide menu
     }
 
@@ -33,6 +39,9 @@ public class MainMenu : MonoBehaviour
     public void ShowGuide()
     {
         guidePanel.SetActive(true);
+        roundController.SetActive(false);
+        howToPlayPanel.SetActive(false);
+        settingsPanel.SetActive(false);
         gameObject.SetActive(false);
     }
 
@@ -40,12 +49,16 @@ public class MainMenu : MonoBehaviour
     public void ShowSettings()
     {
         settingsPanel.SetActive(true);
+        roundController.SetActive(false);
+        howToPlayPanel.SetActive(false);
+        guidePanel.SetActive(false);
         gameObject.SetActive(false);
     }
 
     // Go back to Main Menu
     public void BackToMenu()
     {
+        roundController.SetActive(false);
         howToPlayPanel.SetActive(false);
         guidePanel.SetActive(false);
         settingsPanel.SetActive(false);

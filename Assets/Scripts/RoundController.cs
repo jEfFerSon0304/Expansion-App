@@ -7,7 +7,7 @@ public class RoundController : MonoBehaviour
     public TMP_Text eventTypeText;
     public TMP_Text eventNameText;
     public TMP_Text eventDescriptionText;
-    public GameObject coverPanel; // 👈 the panel that covers the event area
+    public GameObject coverPanel;
 
     private string[] eventTypes = { "Battle", "Trade", "Discovery" };
     private string[] eventNames = { "Orc Ambush", "Merchant Caravan", "Ancient Ruins" };
@@ -63,6 +63,5 @@ public class RoundController : MonoBehaviour
     public void EndGame()
     {
         Debug.Log("Game Ended!");
-        // Application.Quit(); // or return to Main Menu scene
     }
 }

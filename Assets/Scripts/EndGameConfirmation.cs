@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class ConfirmEndGame : MonoBehaviour
 {
-    public GameObject confirmPanel;   // Your confirm popup panel
-    public GameObject mainMenuPanel;  // Your main menu panel
+    public GameObject confirmPanel;  
+    public GameObject mainMenuPanel;  
 
-    // Show confirmation popup
     public void ShowConfirmPanel()
     {
         confirmPanel.SetActive(true);
