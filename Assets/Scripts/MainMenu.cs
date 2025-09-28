@@ -4,7 +4,6 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject roundController;
     public GameObject howToPlayPanel;
     public GameObject guidePanel;
     public GameObject settingsPanel;
@@ -13,13 +12,6 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("GameScene"); // Replace with your game scene name
-    }
-
-    public void ShowRoundController() { 
-        roundController.SetActive(true);
-        gameObject.SetActive(false);
-
-        roundController.GetComponent<RoundController>().ResetRoundController();
     }
 
     // Show How to Play
