@@ -8,12 +8,18 @@ public class MainMenu : MonoBehaviour
     public GameObject howToPlayPanel;
     public GameObject guidePanel;
     public GameObject settingsPanel;
+    public AudioClip defaultMusicClip;
 
     // Start the game (load your first game scene)
     //public void StartGame()
     //{
     //    SceneManager.LoadScene("GameScene"); // Replace with your game scene name
     //}
+
+    public void Start()
+    {
+        AudioManager.Instance.PlayMusic(defaultMusicClip);
+    }
 
     public void ShowRoundController() { 
         roundController.SetActive(true);
